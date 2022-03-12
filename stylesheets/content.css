@@ -1,3 +1,57 @@
+body {
+  background-color: #241D19;
+  max-height: 1080px;
+}
+#OpeningCont{
+  max-height: 1080px;
+  max-width: 1920px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+#gates{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+}
+#clouds{
+  width: 100%;
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  display: flex;
+  z-index: 2;
+}
+.stick{
+  background-color: #6B4E39;
+  height: 500px;
+  width: 15px;
+}
+.cloud{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cloud1 div{
+  margin-bottom: -100px;
+}
+/* #Opening {
+  width: 100%;
+  max-height: 1080px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stick{
+  background-color: #6B4E39;
+  height: 500px;
+  width: 15px;
+}
+.cloud1 img{
+}
 .HellFire {
   position: fixed;
   bottom: 0;
@@ -5,24 +59,23 @@
   z-index: 10;
   height: 11.66vh;
 }
-#Opening {
-  width: 100%;
-  max-height: 1080px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#upper-clouds {
+
+/* #upper-clouds {
   display: flex;
   flex-direction: row;
+} */
+#upper-clouds {
+  display: grid;
+  grid-template-columns: repeat 10, 1fr;
+  grid-auto-rows: 1;
 }
-#gate img{
+
+#gate {
   bottom: 0;
+  animation: gate 4s infinite;
+  z-index: 20;
 }
-body {
-  margin: 0;
-  background-color: blueviolet;
-}
-#game{
+
+#game {
   display: none;
-}
+} */
