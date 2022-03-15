@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "EBGaramond Italic";
+  src: url(/fonts/EBGaramond-Italic-VariableFont_wght);
+}
+
+@font-face {
+  font-family: "EBGaramond";
+  src: url(/fonts/EBGaramond-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "Le Murmure";
+  src: url(/fonts/le-murmure.ttf);
+}
 body {
   background-color: #241D19;
   max-height: 1080px;
@@ -20,6 +33,19 @@ body {
   grid-column: 1 / 1;
   grid-row: 1 / 1;
 }
+#opengate{
+  margin-right: 0;
+  animation: Opening 2s ease-out;
+}
+@keyframes Opening {
+  0%{
+    margin-right: 100px;
+  }
+  100%{
+    margin-right: 0;
+  }
+
+}
 #clouds{
   grid-column: 1 / 1;
   grid-row: 1 / 1;
@@ -29,7 +55,6 @@ body {
   transform-origin: top;
   /* transform: rotateX(90deg); */
   animation: disappearing-up 2s ease-out;
-
 }
 .stick{
   background-color: #6B4E39;
@@ -113,4 +138,93 @@ body {
   grid-column-start: 8;
   grid-column-end: 10;
 
+}
+#OpeningText{
+  max-height: 1080px;
+  max-width: 1920px;
+  overflow: hidden;
+  /* background-color: aqua; */
+  display: none;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+#smallerCloudsUp{
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  display: grid;
+  grid-template-columns: repeat(10, 10%);
+  grid-template-rows: 1fr;
+  transform-origin: top;
+  animation: disappearing-up 2s ease-out;
+}
+#textic{
+  z-index: 100;
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+}
+#textic p{
+  font-family: "EBGaramond";
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 100px;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+.SClouds1{
+  margin-top: -400px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.SClouds2{
+  margin-top: -500px;
+  grid-column-start: 6;
+  grid-column-end: 7;
+}
+.SClouds3{
+  margin-top: -300px;
+  grid-column-start: 9;
+  grid-column-end: 10;
+}
+#smallerCloudsDown{
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  display: grid;
+  grid-template-columns: repeat(10, 10%);
+  grid-template-rows: 50% 50%;
+  transform-origin: bottom;
+  animation: disappearing-down 2s ease-out;
+}
+.SClouds4{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row: 2;
+}
+.SClouds5{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row: 2;
+}
+.SClouds6{
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row: 2;
+}
+.button-wrap{
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(10, 10%);
+}
+button{
+  z-index: 101;
+  font-family: "Le Murmure";
+  width: 512px;
+  height: 127px;
+  background-color: #452F15;
+  grid-column: 2 / 3;
+  grid-row: 8 / 10;
+  color: white;
+  font-size: 96px;
 }

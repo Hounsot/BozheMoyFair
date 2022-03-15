@@ -5,4 +5,12 @@
 $(document).ready(function(lol){
   $("#OpeningCont").css("display", "grid")
 });
-setTimeout(lol, 10000);
+// $(document).ready(function(){
+//   $("#OpeningCont").("display", "none")
+// });
+$(document).ready(function(qol){
+  $(document).delay(4000).queue(function(){
+    $("#OpeningText").css("display", "grid");
+    $("#OpeningCont").css("display", "none");
+  });
+});
