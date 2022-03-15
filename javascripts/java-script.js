@@ -14,3 +14,6 @@ $(document).ready(function(qol){
     $("#OpeningCont").css("display", "none");
   });
 });
+// $(document).ready(function(){
+//   $("body").css("display", "none");
+// })
