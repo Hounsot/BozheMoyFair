@@ -246,7 +246,7 @@ body {
 .SClouds3 {
   margin-top: -320px;
   grid-column-start: 9;
-  grid-column-end: 10;
+  grid-column-end: 11;
 }
 
 #smallerCloudsDown {
@@ -260,14 +260,14 @@ body {
 }
 
 .SClouds4 {
-  margin-top: 50px;
+  margin-top: 180px;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row: 2;
 }
 
 .SClouds5 {
-  margin-top: 200px;
+  margin-top: 280px;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row: 2;
@@ -275,8 +275,8 @@ body {
 
 .SClouds6 {
   margin-top: 100px;
-  grid-column-start: 7;
-  grid-column-end: 10;
+  grid-column-start: 8;
+  grid-column-end: 11;
   grid-row: 2;
 }
 
