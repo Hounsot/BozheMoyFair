@@ -16,6 +16,12 @@ body {
   max-height: 1080px;
   max-width: 1920px;
 }
+#loading{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-self: center;
+}
 #OpeningCont{
   max-height: 1080px;
   max-width: 1920px;
