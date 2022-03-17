@@ -22,6 +22,7 @@ body {
 .loading {
   max-width: 1920px;
   max-height: 1080px;
+  height: 100vh;
   display: none;
   flex-direction: column;
   animation: smirk 2s ease-in-out infinite;
@@ -30,6 +31,7 @@ body {
 }
 
 .loading.transition {
+  transition: transform 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   transform: scale(0.8);
   transform-origin: center;
 }
@@ -51,6 +53,7 @@ body {
 #OpeningCont {
   max-height: 1080px;
   max-width: 1920px;
+  height: 100vh;
   overflow: hidden;
   display: none;
   /* display: grid; */
@@ -62,7 +65,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   grid-column: 1 / 1;
   grid-row: 1 / 1;
 }
@@ -193,7 +196,7 @@ body {
   max-height: 1080px;
   max-width: 1920px;
   overflow: hidden;
-  height: 1080px;
+  height: 100vh;
   /* background-color: aqua; */
   display: none;
   grid-template-columns: 1fr;
@@ -219,7 +222,7 @@ body {
 }
 
 #textic p {
-  max-width: 1108px;
+  max-width: 1221px;
   max-height: 355px;
   margin-top: 320px;
   font-family: "EBGaramond";
@@ -286,10 +289,14 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: repeat(10, 10%);
+  justify-items: center;
+  align-items: center;
 }
 
 button {
+  line-height: 145%;
   z-index: 101;
+  border: none;
   font-family: "Le Murmure";
   width: 512px;
   height: 127px;
@@ -298,4 +305,12 @@ button {
   grid-row: 9 / 10;
   color: white;
   font-size: 96px;
+  text-align: center;
+  transition: background-color 250ms ease-in-out;
+}
+button:hover {
+  background-color: #140C03;
+}
+button:active {
+    transform: scale(0.99);
 }
