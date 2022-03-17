@@ -22,7 +22,7 @@ $(document).ready(function(){
     $("#OpeningCont").css("display", "none");
     $(this).dequeue();
   });
-})
+});
 // $(document).ready(function(){
 //   $(".button-wrap").click(function(){
 //     $("#OpeningText").css("display", "none");
