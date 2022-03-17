@@ -16,17 +16,16 @@ $(document).ready(function(){
   });
 });
 
-$(document).ready(function(qol){
+$(document).ready(function(){
   $(document).delay(6000).queue(function(){
     $("#OpeningText").css("display", "grid");
     $("#OpeningCont").css("display", "none");
+    $(this).dequeue();
   });
-$(document).ready(function(){
-  $(".button-wrap").click(function(){
-    $("#OpeningText").css("display", "none");
-    $("#BadResult").css("display", "grid");
-  })
 })
-$(document).ready(function(){
-  $(".")
-})
+// $(document).ready(function(){
+//   $(".button-wrap").click(function(){
+//     $("#OpeningText").css("display", "none");
+//     $("#BadResult").css("display", "grid");
+//   })
+// })
