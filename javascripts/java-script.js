@@ -23,9 +23,9 @@ $(document).ready(function(){
     $(this).dequeue();
   });
 });
-// $(document).ready(function(){
-//   $(".button-wrap").click(function(){
-//     $("#OpeningText").css("display", "none");
-//     $("#BadResult").css("display", "grid");
-//   })
-// })
+$(document).ready(function(){
+  $(".button-wrap").click(function(){
+    $("#OpeningText").css("display", "none");
+    $("#result").css("display", "grid");
+  })
+})

@@ -34,6 +34,7 @@ body {
   transition: transform 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   transform: scale(0.8);
   transform-origin: center;
+  animation: dis 3s ease-out;
 }
 
 @keyframes smirk {
@@ -49,7 +50,14 @@ body {
     opacity: 100%;
   }
 }
-
+@keyframes dis {
+  0%{
+    opacity: 100%;
+  }
+  100%{
+    opacity: 0%;
+  }
+}
 #OpeningCont {
   max-height: 1080px;
   max-width: 1920px;
@@ -60,7 +68,9 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
-
+.smallergates {
+  display: none;
+}
 #gates {
   display: flex;
   flex-direction: row;
@@ -68,9 +78,10 @@ body {
   align-items: flex-end;
   grid-column: 1 / 1;
   grid-row: 1 / 1;
+  transform-origin: bottom;
 }
 
-#opengate {
+.opengate {
   margin-right: 0;
   animation: Opening 2s ease-out;
 }
@@ -172,7 +183,6 @@ body {
 }
 
 .cloud4 {
-  /* margin-top: 220px; */
   grid-row: 2;
   grid-column-start: 1;
   grid-column-end: 4;
@@ -216,6 +226,7 @@ body {
 #textic {
   display: flex;
   justify-content: center;
+  align-items: center;
   z-index: 100;
   grid-column: 1 / 1;
   grid-row: 1 / 1;
@@ -224,7 +235,6 @@ body {
 #textic p {
   max-width: 1221px;
   max-height: 355px;
-  margin-top: 320px;
   font-family: "EBGaramond";
   color: white;
   font-style: normal;
@@ -313,4 +323,70 @@ button:hover {
 }
 button:active {
     transform: scale(0.99);
+}
+#result{
+  max-height: 1080px;
+  max-width: 1920px;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+#count {
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  font-family: "Le Murmure";
+  font-size: 120px;
+  text-align: center;
+  color: white;
+  justify-items: center;
+  align-items: center;
+}
+#goodFinal{
+  max-height: 1080px;
+  max-width: 1920px;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+#goodrestext {
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  font-family: "Le Murmure";
+  font-size: 96px;
+  text-align: center;
+  color: black;
+  justify-items: center;
+  align-items: center;
+}
+#badFinal{
+  max-height: 1080px;
+  max-width: 1920px;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+#badrestext {
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  font-family: "Le Murmure";
+  font-size: 96px;
+  text-align: center;
+  color: white;
+  justify-items: center;
+  align-items: center;
 }
