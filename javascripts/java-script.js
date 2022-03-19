@@ -41,7 +41,6 @@ var intervalId = window.setInterval(function(){
   var leq = $('.fire').css('margin-left');
   console.log(vpw);
   console.log(leq);
-  $("#game").css("display", "grid");
   $('.fire').animate({ marginLeft: `${vpw}px`}, 500);
 }, 5000);
 // $(document).ready(){
