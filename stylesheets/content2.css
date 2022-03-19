@@ -31,7 +31,7 @@ body {
 }
 
 .loading.transition {
-  transition: transform 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 2s cubic-bezier(0.55, 0.28, 0.58, 1);
   transform: scale(0.8);
   transform-origin: center;
   animation: dis 3s ease-out;
@@ -50,14 +50,17 @@ body {
     opacity: 100%;
   }
 }
+
 @keyframes dis {
-  0%{
+  0% {
     opacity: 100%;
   }
-  100%{
+
+  100% {
     opacity: 0%;
   }
 }
+
 #OpeningCont {
   max-height: 1080px;
   max-width: 1920px;
@@ -68,9 +71,11 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
+
 .smallergates {
   display: none;
 }
+
 #gates {
   display: flex;
   flex-direction: row;
@@ -262,6 +267,17 @@ body {
   grid-column-end: 11;
 }
 
+#game {
+  max-height: 1080px;
+  max-width: 1920px;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
 #smallerCloudsDown {
   grid-column: 1 / 1;
   grid-row: 1 / 1;
@@ -318,13 +334,39 @@ button {
   text-align: center;
   transition: background-color 250ms ease-in-out;
 }
+
 button:hover {
   background-color: #140C03;
 }
+
 button:active {
-    transform: scale(0.99);
+  transform: scale(0.99);
 }
-#result{
+
+.hellFire {
+  z-index: 101;
+  display: grid;
+  overflow-x: hidden;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  align-items: end;
+}
+
+.fire {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  transition: all 3000ms ease-in;
+}
+
+.ghost {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#result {
   max-height: 1080px;
   max-width: 1920px;
   height: 100vh;
@@ -333,6 +375,7 @@ button:active {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
+
 #count {
   display: flex;
   justify-content: center;
@@ -346,7 +389,8 @@ button:active {
   justify-items: center;
   align-items: center;
 }
-#goodFinal{
+
+#goodFinal {
   max-height: 1080px;
   max-width: 1920px;
   height: 100vh;
@@ -355,6 +399,7 @@ button:active {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
+
 #goodrestext {
   display: flex;
   justify-content: center;
@@ -368,7 +413,8 @@ button:active {
   justify-items: center;
   align-items: center;
 }
-#badFinal{
+
+#badFinal {
   max-height: 1080px;
   max-width: 1920px;
   height: 100vh;
@@ -377,6 +423,7 @@ button:active {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
+
 #badrestext {
   display: flex;
   justify-content: center;
