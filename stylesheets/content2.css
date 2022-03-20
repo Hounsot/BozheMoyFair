@@ -277,7 +277,13 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
-
+.mech{
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
 #smallerCloudsDown {
   grid-column: 1 / 1;
   grid-row: 1 / 1;
