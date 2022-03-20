@@ -60,20 +60,74 @@ $(document).ready(function() {
 //     }, 1000);
 //   });
 
-$(".button-wrap").click(function(){
-  var counter = 0;
-  var timer = setInterval(function () {
-      counter++;
-      console.log(counter);
-      if(counter>=10){
-          clearInterval(timer)
-      }
-  }, 1000);
-})
+// $(".button-wrap").click(function(){
+//   var counter = 0;
+//   var timer = setInterval(function () {
+//       counter++;
+//       console.log(counter);
+//       if(counter>=10){
+//           clearInterval(timer)
+//       }
+//   }, 1000);
+// })
+
+// $(document).ready(function(){
+//   var viewportwidth = $(document).width();
+//   $(".button-wrap").click(function(){
+//     $(".mech").append('<div class="ghost"><img src="images/ghostface.svg" alt=""><div class="stick"></div></div>');
+//   });
+//   var counter = 0;
+//   var timer = setInterval(function(){
+//     counter++
+//     $(".ghost").animate({ left: `${viewportwidth}px`}, 20000);
+//     if(counter>=100){
+//       clearInterval(timer)
+//     }
+//   }, 1000);
+// })
 $(document).ready(function(){
+  var viewportwidth = $(document).width();
+  var counter = 0;
+  var speedinc = 0;
+  var pipik = '<div class="ghost"><img src="images/ghostface.svg" alt=""><div class="stick"></div></div>'
   $(".button-wrap").click(function(){
-    $(".mech").append('<div class="ghost"><img src="images/ghostface.svg" alt=""><div class="stick"></div></div>');
-  })
+  var timer = setInterval(function(){
+    let randomA = Math.random()*200+300;
+    // let randomB = Math.random()*100;
+    // let randomC = Math.random()*100+400;
+    // $.keyframes.define([{
+    //   name: 'sereza',
+    //   '0%': {top:`${randomA}px`},
+    //   '50%': {top:`${randomB}px`},
+    //   '100%': {top: `${randomC}px`}
+    // }]);
+    counter++;
+    speedinc = speedinc + 100;
+    console.log(viewportwidth);
+    console.log(randomA);
+    console.log(counter);
+    console.log(speedinc);
+
+    // console.log(randomB);
+    // console.log(randomC);
+    $(".mech").append(pipik);
+    // $(".ghost").playKeyframe({
+    //   name: 'sereza',
+    //   duration: 4000
+    // });
+    $(".ghost").animate({ left: `${viewportwidth}px`,
+                          top: `${randomA}px`
+}, 4000 - speedinc, "linear", function(){
+      this.remove();
+    });
+    // if (offsetik == viewportwidth) {
+    //   pipik.remove();
+    // }
+    if(counter>=100){
+      clearInterval(timer)
+    }
+  }, 2000)
+})
 })
 // <div class="ghost">
 //   <img src="ghostface.svg" alt="">

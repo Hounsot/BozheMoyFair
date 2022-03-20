@@ -365,11 +365,24 @@ button:active {
   grid-row: 1 / 1;
   transition: all 3000ms ease-in;
 }
-
+.mech{
+  position: relative;
+  width: 1920px;
+  height: 100%;
+  overflow: hidden;
+}
 .ghost {
+  overflow: hidden;
+  left: -300px;
+  position: absolute;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.ghost > img{
+  z-index: 101;
+  margin-bottom: -10vh;
 }
 
 #result {
