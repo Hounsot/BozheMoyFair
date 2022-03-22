@@ -370,21 +370,23 @@ button:active {
   width: 1920px;
   height: 100%;
   overflow: hidden;
+  z-index: 2000;
 }
 .ghost {
   overflow: hidden;
   left: -300px;
   position: absolute;
   bottom: 0;
+  z-index: -1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transform-origin: bottom;
 }
 .ghost > img{
   z-index: 101;
   margin-bottom: -10vh;
 }
-
 #result {
   max-height: 1080px;
   max-width: 1920px;

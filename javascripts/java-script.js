@@ -30,6 +30,15 @@ $(document).ready(function() {
     $("#game").css("display", "grid");
   })
 })
+$(document).ready(function(){
+  var limer = setInterval(function(){
+    let grusha = $(".cloudi").css("margin-top");
+    console.log(grusha);
+    let cloudHran = Math.random()*100 + grusha;
+    $(".cloudi").animate({ marginTop: `${cloudHran}px`}, 3000)
+  }, 3000);
+})
+
 
 // $(document).ready(function(){
 //   $(".button-wrap").click(function(){
@@ -85,11 +94,11 @@ $(document).ready(function() {
 //     }
 //   }, 1000);
 // })
+var pipik = '<div class="ghost"><img class="ghostimage" src="images/ghist.png" alt=""><div class="stick"></div></div>'
 $(document).ready(function(){
   var viewportwidth = $(document).width();
   var counter = 0;
   var speedinc = 0;
-  var pipik = '<div class="ghost"><img src="images/ghostface.svg" alt=""><div class="stick"></div></div>'
   $(".button-wrap").click(function(){
   var timer = setInterval(function(){
     let randomA = Math.random()*200+300;
@@ -107,7 +116,6 @@ $(document).ready(function(){
     console.log(randomA);
     console.log(counter);
     console.log(speedinc);
-
     // console.log(randomB);
     // console.log(randomC);
     $(".mech").append(pipik);
@@ -120,15 +128,50 @@ $(document).ready(function(){
 }, 4000 - speedinc, "linear", function(){
       this.remove();
     });
-    // if (offsetik == viewportwidth) {
-    //   pipik.remove();
-    // }
+    $(".ghost").click(function(){
+      console.log("privet");
+      this.remove();
+    })
     if(counter>=100){
       clearInterval(timer)
     }
   }, 2000)
 })
 })
+
+// $(document).ready(function(){
+// var hit = 0
+// $(".ghost").click(function(){
+//   hit++;
+//   console.log(hit);
+//   $(".ghost").animate({opacity: 0}, 100, function(){
+//     this.remove();
+//   });
+// })
+// });
+// $(document).ready(function(){
+//   $(function () {
+//     let count = 0;
+//     $(".ghost").click(function () {
+//       count += 1;
+//       console.log(count);
+//       if (count == 1) {
+//         $(".ghost").css("opacity", "0");
+//       }
+//     });
+//   });
+// })
+
+// $(document).ready(function(){
+//   console.log("hello");
+//   $(".ghost").click(function(){
+//     console.log("privet");
+//   })
+// })
+
+//задаем функции условие
+
+// += присваивание
 // <div class="ghost">
 //   <img src="ghostface.svg" alt="">
 //   <div class="stick">
