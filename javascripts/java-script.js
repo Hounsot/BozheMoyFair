@@ -31,11 +31,9 @@ $(document).ready(function() {
   })
 })
 $(document).ready(function(){
-  var limer = setInterval(function(){
-    let grusha = $(".cloudi").css("margin-top");
-    console.log(grusha);
-    let cloudHran = Math.random()*100 + grusha;
-    $(".cloudi").animate({ marginTop: `${cloudHran}px`}, 3000)
+  var timer = setInterval(function(){
+    var cloudHran = Math.random()*100 + 80;
+    $("#smallerCloudsUp").animate({ marginTop: `${cloudHran}px`}, 3000);
   }, 3000);
 })
 
@@ -97,39 +95,54 @@ $(document).ready(function(){
 var pipik = '<div class="ghost"><img class="ghostimage" src="images/ghist.png" alt=""><div class="stick"></div></div>'
 $(document).ready(function(){
   var viewportwidth = $(document).width();
+  // var lol = $(".ghost").offset().left;
   var counter = 0;
   var speedinc = 0;
+  var hithit = 0;
+  var hp = 200;
+  var miss = 0;
   $(".button-wrap").click(function(){
   var timer = setInterval(function(){
     let randomA = Math.random()*200+300;
-    // let randomB = Math.random()*100;
-    // let randomC = Math.random()*100+400;
-    // $.keyframes.define([{
-    //   name: 'sereza',
-    //   '0%': {top:`${randomA}px`},
-    //   '50%': {top:`${randomB}px`},
-    //   '100%': {top: `${randomC}px`}
-    // }]);
     counter++;
     speedinc = speedinc + 100;
-    console.log(viewportwidth);
-    console.log(randomA);
-    console.log(counter);
-    console.log(speedinc);
-    // console.log(randomB);
-    // console.log(randomC);
+    // console.log($(".ghost").offset())
+    // console.log(viewportwidth);
+    // console.log(randomA);
+    // console.log(counter);
+    // console.log(speedinc);
+    if (hithit == 10) {
+      $("#game").css("display", "none");
+      $("#result").css("display", "grid");
+    }
+    if ($(".ghost").offset() > 500) {
+      console.log("privet")
+    }
     $(".mech").append(pipik);
-    // $(".ghost").playKeyframe({
-    //   name: 'sereza',
-    //   duration: 4000
-    // });
     $(".ghost").animate({ left: `${viewportwidth}px`,
                           top: `${randomA}px`
-}, 4000 - speedinc, "linear", function(){
-      this.remove();
-    });
+}, 4000 - speedinc, "linear", function() {
+  var lol = $(".ghost").offset().left;
+  console.log(lol);
+  this.remove();
+  if (lol === viewportwidth) {
+    miss += 1;
+    // console.log(lol);
+    console.log("miss");
+    this.remove();
+  }
+},
+// function(){
+//     console.log("lol");
+//       this.remove();
+//     }
+  );
     $(".ghost").click(function(){
-      console.log("privet");
+      hithit++;
+      $("#count").text(`Ваш результат:
+${hithit}/${miss}`);
+      console.log(hithit);
+      $("#cunt").text(hithit);
       this.remove();
     })
     if(counter>=100){
@@ -138,7 +151,6 @@ $(document).ready(function(){
   }, 2000)
 })
 })
-
 // $(document).ready(function(){
 // var hit = 0
 // $(".ghost").click(function(){

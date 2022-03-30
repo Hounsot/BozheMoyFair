@@ -1,16 +1,16 @@
 @font-face {
   font-family: "EBGaramond Italic";
-  src: url(/fonts/EBGaramond-Italic-VariableFont_wght);
+  src: url(../fonts/EBGaramond-Italic-VariableFont_wght.ttf);
 }
 
 @font-face {
   font-family: "EBGaramond";
-  src: url(/fonts/EBGaramond-VariableFont_wght.ttf);
+  src: url(../fonts/EBGaramond-VariableFont_wght.ttf);
 }
 
 @font-face {
   font-family: "Le Murmure";
-  src: url(/fonts/le-murmure.ttf);
+  src: url(../fonts/le-murmure.ttf);
 }
 
 body {
@@ -277,6 +277,17 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
+.cuntcon{
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  width: 100%;
+  height: 100%;
+}
+#cunt{
+  color: chartreuse;
+  font-size: 100px;
+  text-align: center;
+}
 .mech{
   grid-column: 1 / 1;
   grid-row: 1 / 1;
@@ -350,7 +361,6 @@ button:active {
 }
 
 .hellFire {
-  z-index: 101;
   display: grid;
   overflow-x: hidden;
   grid-template-rows: 1fr;
@@ -358,6 +368,9 @@ button:active {
   grid-column: 1 / 1;
   grid-row: 1 / 1;
   align-items: end;
+}
+.hellFire > img{
+  z-index: 2000;
 }
 
 .fire {
@@ -370,21 +383,25 @@ button:active {
   width: 1920px;
   height: 100%;
   overflow: hidden;
-  z-index: 2000;
+  /* z-index: 2000; */
 }
 .ghost {
+  z-index: 2000;
   overflow: hidden;
   left: -300px;
   position: absolute;
   bottom: 0;
-  z-index: -1;
   display: flex;
   flex-direction: column;
   align-items: center;
   transform-origin: bottom;
 }
 .ghost > img{
-  z-index: 101;
+  z-index: 2002;
+  margin-bottom: -10vh;
+}
+.ghost > div{
+  z-index: -4000;
   margin-bottom: -10vh;
 }
 #result {
@@ -412,6 +429,7 @@ button:active {
 }
 
 #goodFinal {
+  background-color: #FFFBD7;
   max-height: 1080px;
   max-width: 1920px;
   height: 100vh;
