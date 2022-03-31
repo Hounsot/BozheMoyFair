@@ -111,7 +111,7 @@ $(document).ready(function(){
     // console.log(randomA);
     // console.log(counter);
     // console.log(speedinc);
-    if (hithit == 15) {
+    if (hithit == 2) {
       $("#game").css("display", "none");
       $("#result").css("display", "grid");
       $("#result").delay(3000).queue(function(){
