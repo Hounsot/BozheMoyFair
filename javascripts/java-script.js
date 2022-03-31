@@ -115,13 +115,10 @@ $(document).ready(function(){
       $("#game").css("display", "none");
       $("#result").css("display", "grid");
     }
-    if ($(".ghost").offset() > 500) {
-      console.log("privet")
-    }
     $(".mech").append(pipik);
     $(".ghost").animate({ left: `${viewportwidth}px`,
                           top: `${randomA}px`
-}, 4000 - speedinc, "linear", function() {
+}, 2000 - speedinc, "linear", function() {
   var lol = $(".ghost").offset().left;
   console.log(lol);
   this.remove();
@@ -151,6 +148,20 @@ ${hithit}/${miss}`);
   }, 2000)
 })
 })
+
+$(document).ready(function(){
+  $("").delay(3000).queue(function(){
+    if (hithit > 20) {
+      $("#result").css("display", "none");
+      $("#goodFinal").css("display", "grid");
+    }
+    else {
+      $("#result").css("display", "none");
+      $("#badFinal").css("display", "grid");
+    }
+  })
+})
+
 // $(document).ready(function(){
 // var hit = 0
 // $(".ghost").click(function(){
