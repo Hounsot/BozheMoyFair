@@ -97,7 +97,7 @@ ${hithit}/${miss}`);
     $(".mech").append(pipik);
     $(".ghost").animate({ left: `${viewportwidth}px`,
                           top: `${randomA}px`
-}, 1200 - speedinc, "linear", function() {
+}, 1800 - speedinc, "linear", function() {
   var lol = $(".ghost").offset().left;
   // console.log(lol);
   this.remove();

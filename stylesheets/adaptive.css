@@ -317,7 +317,7 @@
   }
 
   .cloud>img {
-    transform: scale(0.30);
+    transform: scale(0.50);
   }
 
   .cloud1 {
@@ -327,9 +327,9 @@
   }
 
   .cloud2 {
-    margin-top: -585px;
-    grid-column-start: 6;
-    grid-column-end: 8;
+    margin-top: -470px;
+    grid-column-start: 8;
+    grid-column-end: 9;
   }
 
   .cloud3 {
@@ -339,7 +339,6 @@
     grid-column-end: 11;
   }
   .cloud6 {
-    display: none;
   }
   .cloud5 {
     display: none;
@@ -437,11 +436,19 @@
     height: 83px;
     background-color: #452F15;
     grid-column: 2 / 3;
-    grid-row: 9 / 10;
+    grid-row: 8 / 10;
     color: white;
     font-size: 64px;
     text-align: center;
     transition: background-color 250ms ease-in-out;
+  }
+  .button-wrap2 > button{
+    width: 400px;
+    height: 83px;
+    grid-row: 8 / 10;
+  }
+  .fire{
+    height: 70px;
   }
 
   #result {
