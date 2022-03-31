@@ -105,20 +105,30 @@ $(document).ready(function(){
   var timer = setInterval(function(){
     let randomA = Math.random()*200+300;
     counter++;
-    speedinc = speedinc + 100;
+    speedinc = speedinc + 50;
     // console.log($(".ghost").offset())
     // console.log(viewportwidth);
     // console.log(randomA);
     // console.log(counter);
     // console.log(speedinc);
-    if (hithit == 10) {
+    if (hithit == 15) {
       $("#game").css("display", "none");
       $("#result").css("display", "grid");
+      $("#result").delay(3000).queue(function(){
+        if (hithit > 20) {
+          $("#result").css("display", "none");
+          $("#goodFinal").css("display", "grid");
+        }
+        else {
+          $("#result").css("display", "none");
+          $("#badFinal").css("display", "grid");
+        }
+      });
     }
     $(".mech").append(pipik);
     $(".ghost").animate({ left: `${viewportwidth}px`,
                           top: `${randomA}px`
-}, 2000 - speedinc, "linear", function() {
+}, 1200 - speedinc, "linear", function() {
   var lol = $(".ghost").offset().left;
   console.log(lol);
   this.remove();
@@ -149,18 +159,18 @@ ${hithit}/${miss}`);
 })
 })
 
-$(document).ready(function(){
-  $("").delay(3000).queue(function(){
-    if (hithit > 20) {
-      $("#result").css("display", "none");
-      $("#goodFinal").css("display", "grid");
-    }
-    else {
-      $("#result").css("display", "none");
-      $("#badFinal").css("display", "grid");
-    }
-  })
-})
+// $(document).ready(function(){
+//   $("").delay(3000).queue(function(){
+//     if (hithit > 20) {
+//       $("#result").css("display", "none");
+//       $("#goodFinal").css("display", "grid");
+//     }
+//     else {
+//       $("#result").css("display", "none");
+//       $("#badFinal").css("display", "grid");
+//     }
+//   })
+// })
 
 // $(document).ready(function(){
 // var hit = 0
