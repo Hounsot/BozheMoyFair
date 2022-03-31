@@ -296,6 +296,7 @@ body {
   z-index: 99;
 }
 #smallerCloudsDown {
+  overflow: hidden;
   grid-column: 1 / 1;
   grid-row: 1 / 1;
   display: grid;
