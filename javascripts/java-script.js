@@ -47,6 +47,7 @@ $(document).ready(function(){
 
 
 var pipik = '<div class="ghost"><img class="ghostimage" src="images/ghist.png" alt=""><div class="stick"></div></div>'
+var cipik = '<div class="ghostA"><img class="ghostimage" src="images/ghist.png" alt=""><div class="stick"></div></div>'
 $(document).ready(function(){
   var viewportwidth = $(document).width();
   var counter = 0;
@@ -54,6 +55,7 @@ $(document).ready(function(){
   var hithit = 0;
   var hp = 200;
   var miss = 0;
+  let randomHi = Math.random()*400+100;
   $(".button-wrap").click(function(){
   var timer = setInterval(function(){
     var fff = $("#result").css("display");
@@ -95,9 +97,14 @@ ${hithit}/${miss}`);
       })
     }
     $(".mech").append(pipik);
+    $(".mecha").append(cipik);
+    $(".ghostA").animate({ top: `${randomHi}`
+    }, 1000, "linear", function(){
+      this.remove
+    })
     $(".ghost").animate({ left: `${viewportwidth}px`,
                           top: `${randomA}px`
-}, 1800 - speedinc, "linear", function() {
+}, 3000 - speedinc, "linear", function() {
   var lol = $(".ghost").offset().left;
   // console.log(lol);
   this.remove();
@@ -114,6 +121,13 @@ ${hithit}/${miss}`);
       $("#cunt").text(hithit);
       this.remove();
     })
+    $(".ghostA").click(function(){
+      hithit++;
+      console.log(hithit);
+      $("#cunt").text(hithit);
+      this.remove();
+    })
+
     if(counter>=100){
       clearInterval(timer)
     }
