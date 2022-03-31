@@ -2,7 +2,13 @@
   font-family: "EBGaramond Italic";
   src: url(../fonts/EBGaramond-Italic-VariableFont_wght.ttf);
 }
+img {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
 
+}
 @font-face {
   font-family: "EBGaramond";
   src: url(../fonts/EBGaramond-VariableFont_wght.ttf);
@@ -472,6 +478,25 @@ button:active {
   margin-bottom: -10vh;
 }
 .ghostA > div{
+  z-index: -4000;
+  margin-bottom: -10vh;
+}
+.ghostB{
+  z-index: 2000;
+  overflow: hidden;
+  top: 150%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform-origin: bottom;
+}
+.ghostB > img{
+  z-index: 2002;
+  margin-bottom: -10vh;
+}
+.ghostB > div{
   z-index: -4000;
   margin-bottom: -10vh;
 }
