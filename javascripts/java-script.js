@@ -57,23 +57,39 @@ $(document).ready(function(){
   $(".button-wrap").click(function(){
   var timer = setInterval(function(){
     var fff = $("#result").css("display");
-    console.log(fff);
+    // console.log(fff);
     let randomA = Math.random()*200+300;
     counter++;
+    if (miss == 1) {
+      $("#hpt").css("display", "none");
+    }
+    if (miss == 2) {
+      $("#hps").css("display", "none");
+    }
+    if (miss == 3) {
+      $("#hpf").css("display", "none");
+    }
     speedinc = speedinc + 50;
-    if (hithit == 2) {
+    if (hithit == 20) {
       $("#game").css("display", "none");
       $("#result").css("display", "grid");
+      $("#count").text(`Ваш результат
+${hithit}/${miss}`);
+    } else if (miss == 3) {
+      console.log(miss);
+      $("#game").css("display", "none");
+      $("#result").css("display", "grid");
+      $("#count").text(`Ваш результат
+${hithit}/${miss}`);
     }
     if (fff === "grid") {
       $("#result").delay(3000).queue(function(){
-        if (hithit >= 20) {
+        if (hithit >= 15) {
           $("#goodFinal").css("display", "grid");
           $("#result").css("display", "none");
         } else {
           $("#badFinal").css("display", "grid");
           $("#result").css("display", "none");
-
         }
         $(this).dequeue();
       })
@@ -83,19 +99,17 @@ $(document).ready(function(){
                           top: `${randomA}px`
 }, 1200 - speedinc, "linear", function() {
   var lol = $(".ghost").offset().left;
-  console.log(lol);
+  // console.log(lol);
   this.remove();
   if (lol === viewportwidth) {
     miss += 1;
-    console.log("miss");
+    console.log(miss);
     this.remove();
   }
 },
   );
     $(".ghost").click(function(){
       hithit++;
-      $("#count").text(`Ваш результат:
-${hithit}/${miss}`);
       console.log(hithit);
       $("#cunt").text(hithit);
       this.remove();
@@ -108,4 +122,15 @@ ${hithit}/${miss}`);
     }
   }, 4000)
 })
+})
+
+$(document).ready(function() {
+  $(".button-wrap2").click(function() {
+    $("#badFinal").css("display", "none");
+    $("#OpeningText").css("display", "grid");
+     counter = 0;
+     speedinc = 0;
+     hithit = 0;
+     miss = 0;
+  })
 })

@@ -283,3 +283,186 @@
     align-items: center;
   }
 }
+@media all and (max-width: 1024px) {
+  body {
+    max-width: 1024px;
+    height: 100vh;
+  }
+
+  .loading {
+    max-width: 1024px;
+    height: 100vh;
+    display: none;
+    overflow: hidden;
+  }
+
+  #OpeningCont {
+    max-width: 1024px;
+    height: 100vh;
+    overflow: hidden;
+    display: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .biggates {
+    display: none;
+  }
+
+  .smallergates {
+    display: none;
+  }
+  .evensmallergates{
+    display: block;
+  }
+
+  .cloud>img {
+    transform: scale(0.30);
+  }
+
+  .cloud1 {
+    margin-top: -420px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  .cloud2 {
+    margin-top: -585px;
+    grid-column-start: 6;
+    grid-column-end: 8;
+  }
+
+  .cloud3 {
+    display: none;
+    margin-top: -400px;
+    grid-column-start: 8;
+    grid-column-end: 11;
+  }
+  .cloud6 {
+    display: none;
+  }
+  .cloud5 {
+    display: none;
+  }
+
+
+  @keyframes Opening {
+    0% {
+      margin-right: 50px;
+    }
+
+    100% {
+      margin-right: 0;
+    }
+  }
+
+  .stick {
+    background-color: #6B4E39;
+    height: 500px;
+    width: 8px;
+  }
+
+  #OpeningText {
+    max-width: 1024px;
+    overflow: hidden;
+    height: 100vh;
+    display: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  #textic p {
+    max-width: 791px;
+    max-height: 355px;
+    font-family: "EBGaramond";
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 54px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+
+  .cloudi>img {
+    transform: scale(0.70);
+  }
+
+  .SClouds1>img {
+    margin-top: -50px;
+  }
+
+  .SClouds2>img {
+    margin-top: -35px;
+  }
+
+  .SClouds3>img {
+    margin-top: -50px;
+  }
+
+  .SClouds6>img {
+    transform: scale(0.80);
+  }
+
+  .SClouds1 {
+    margin-top: -470px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  .SClouds2 {
+    margin-top: -520px;
+    grid-column-start: 8;
+    grid-column-end: 9;
+  }
+
+  .SClouds3 {
+    display: none;
+  }
+
+  .SClouds4 {
+    margin-top: 67px;
+  }
+
+  .SClouds5 {
+    margin-top: 160px;
+  }
+
+  .SClouds6 {
+    margin-top: 0px;
+  }
+
+  button {
+    line-height: 145%;
+    width: 400px;
+    height: 83px;
+    background-color: #452F15;
+    grid-column: 2 / 3;
+    grid-row: 9 / 10;
+    color: white;
+    font-size: 64px;
+    text-align: center;
+    transition: background-color 250ms ease-in-out;
+  }
+
+  #result {
+    max-height: 768px;
+    max-width: 1366px;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  #count {
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    font-family: "Le Murmure";
+    font-size: 96px;
+    text-align: center;
+    color: white;
+    justify-items: center;
+    align-items: center;
+  }
+
+}
