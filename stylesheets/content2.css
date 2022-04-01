@@ -21,6 +21,7 @@ img {
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+  pointer-events: none;
 
 }
 
@@ -434,6 +435,7 @@ img {
   align-items: center;
 }
 .button-wrap2 > button{
+  cursor: pointer;
   height: 105px;
   width: 600px;
   grid-row: 8 / 10;
