@@ -33,26 +33,25 @@ $(document).ready(function() {
   })
 })
 $(document).ready(function() {
-  var timer = setInterval(function() {
+  var lamer = setInterval(function() {
     var cloudHran = Math.random() * 100 + 80;
-    $("#smallerCloudsUp").animate({
+    $(".smallerCloudsUp").animate({
       marginTop: `${cloudHran}px`
     }, 3000);
   }, 3000);
 })
 $(document).ready(function() {
-  var timer = setInterval(function() {
+  var lamer = setInterval(function() {
     var cloudHran = Math.random() * 100 + 80;
-    $("#smallerCloudsDown").animate({
+    $(".smallerCloudsDown").animate({
       marginTop: `${cloudHran}px`
     }, 3000);
   }, 3000);
 })
 
-
 var pipik = '<div class="ghost"><img class="ghostimage" src="images/ghist.png" alt=""><div class="stick"></div></div>'
-var cipik = '<div class="ghostA"><img class="ghostimage" src="images/ghist.png" alt=""><div class="stick"></div></div>'
-var cipik1 = '<div class="ghostB"><img class="ghostimage" src="images/ghist.png" alt=""><div class="stick"></div></div>'
+var cipik = '<div class="ghostA"><img class="ghostimage" src="images/scaredghilst.png" alt=""><div class="stick"></div></div>'
+var cipik1 = '<div class="ghostB"><img class="ghostimage" src="images/angryghilst.png" alt=""><div class="stick"></div></div>'
 
 $(document).ready(function() {
   var viewportwidth = $(document).width();
@@ -81,7 +80,7 @@ $(document).ready(function() {
       } else if (miss == 3) {
         $("#hpf").css("display", "none");
       }
-      speedinc = speedinc + 100;
+      speedinc = speedinc + 220;
       if (hithit == 20) {
         $("#game").css("display", "none");
         $("#result").css("display", "grid");
@@ -95,7 +94,7 @@ ${hithit}/${miss}`);
         ${hithit}/${miss}`);
       }
       if (fff === "grid") {
-        $("#result").delay(3000).queue(function() {
+        $("#result").delay(2000).queue(function() {
           if (hithit >= 15) {
             $("#goodFinal").css("display", "grid");
             $("#result").css("display", "none");
@@ -129,7 +128,7 @@ ${hithit}/${miss}`);
       $(".ghostB").css("left", `${kipik}px`);
       $(".ghostB").animate({
         top: `${randomHiS}`
-      }, 2500 - speedinc, "linear", function() {
+      }, 2800 - speedinc, "linear", function() {
         $(".ghostB").animate({
           top: `${1200}px`
         }, 1000, "linear")
@@ -145,7 +144,7 @@ ${hithit}/${miss}`);
       })
       $(".ghostA").animate({
         top: `${randomHi}`
-      }, 2500 - speedinc, "linear", function() {
+      }, 2800 - speedinc, "linear", function() {
         $(".ghostA").animate({
           top: `${1200}px`
         }, 1000, "linear")
@@ -157,16 +156,18 @@ ${hithit}/${miss}`);
           }
           this.remove();
         })
+        $(this).dequeue();
       })
       $(".ghost").animate({
         left: `${viewportwidth}px`,
         top: `${randomA}px`
       }, 3000 - speedinc, "linear", function() {
         var lol = $(".ghost").offset().left;
-        var kol = $(".ghostB").offset().top;
+        console.log(lol);
+        console.log(viewportwidth);
         this.remove();
         if (lol === viewportwidth) {
-          miss += 1;
+          miss++;
           console.log(miss);
           this.remove();
         }
@@ -186,6 +187,7 @@ ${hithit}/${miss}`);
         hithit++;
         console.log(hithit);
         $("#cunt").text(hithit);
+        this.remove();
         $(".ghost").delay(2000).queue(function() {
           this.remove();
         })
@@ -212,11 +214,12 @@ ${hithit}/${miss}`);
 
 $(document).ready(function() {
   $(".button-wrap2").click(function() {
+    $("#goodFinal").css("display", "none");
     $("#badFinal").css("display", "none");
     $("#OpeningText").css("display", "grid");
-    counter = 0;
-    speedinc = 0;
-    hithit = 0;
-    miss = 0;
+    var counter = 0;
+    var speedinc = 0;
+    var hithit = 0;
+    var miss = 0;
   })
 })

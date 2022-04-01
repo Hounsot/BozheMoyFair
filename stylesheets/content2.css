@@ -106,7 +106,6 @@ body {
   grid-row: 1 / 1;
   transform-origin: bottom;
 }
-
 .opengate {
   margin-right: 0;
   animation: Opening 2s ease-out;
@@ -202,7 +201,9 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
+.ios{
+  display: none;
+}
 .cloudi img {
   z-index: 2;
   margin-bottom: -100px;
@@ -239,7 +240,7 @@ body {
   grid-template-rows: 1fr;
 }
 
-#smallerCloudsUp {
+.smallerCloudsUp {
   grid-column: 1 / 1;
   grid-row: 1 / 1;
   display: grid;
@@ -265,11 +266,10 @@ body {
   color: white;
   font-style: normal;
   font-weight: bold;
-  font-size: 72px;
+  font-size: 52px;
   grid-column-start: 1;
   grid-column-end: 1;
 }
-
 .SClouds1 {
   margin-top: -420px;
   grid-column-start: 2;
@@ -287,9 +287,8 @@ body {
   grid-column-start: 9;
   grid-column-end: 11;
 }
-
 #game {
-  max-height: 1080px;
+  /* max-height: 1080px; */
   max-width: 1920px;
   width: 100vw;
   height: 100vh;
@@ -370,7 +369,7 @@ body {
   z-index: 99;
 }
 
-#smallerCloudsDown {
+.smallerCloudsDown {
   overflow: hidden;
   grid-column: 1 / 1;
   grid-row: 1 / 1;
@@ -592,6 +591,18 @@ button:active {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
+#sl{
+  display: none;
+}
+#sad{
+  display: block;
+}
+#aad{
+  display: none;
+}
+#fad{
+  display: none;
+}
 
 #badrestext {
   display: flex;
@@ -605,4 +616,10 @@ button:active {
   color: white;
   justify-items: center;
   align-items: center;
+}
+.IOSClouds1{
+  display: none;
+}
+.IOSClouds2{
+  display: none;
 }

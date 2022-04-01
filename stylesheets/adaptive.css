@@ -3,6 +3,9 @@
     /* max-height: 900px; */
     max-width: 1440px;
   }
+  .fire{
+    height: 100px;
+  }
 
   .loading {
     /* max-height: 900px; */
@@ -55,7 +58,7 @@
     color: white;
     font-style: normal;
     font-weight: bold;
-    font-size: 64px;
+    font-size: 50px;
     grid-column-start: 1;
     grid-column-end: 1;
   }
@@ -78,15 +81,18 @@
     height: 83px;
     background-color: #452F15;
     grid-column: 2 / 3;
-    grid-row: 9 / 10;
+    grid-row: 8 / 10;
     color: white;
     font-size: 64px;
     text-align: center;
     transition: background-color 250ms ease-in-out;
   }
-
+  .button-wrap2 > button {
+    width: 400px;
+    height: 83px;
+    grid-row: 8 / 10;
+  }
   #result {
-    max-height: 900px;
     max-width: 1440px;
     height: 100vh;
     overflow: hidden;
@@ -112,6 +118,10 @@
     /* max-height: 768px; */
     max-width: 1366px;
   }
+  .fire{
+    height: 90px;
+  }
+
 
   .loading {
     /* max-height: 768px; */
@@ -194,7 +204,7 @@
     color: white;
     font-style: normal;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 48px;
     grid-column-start: 1;
     grid-column-end: 1;
   }
@@ -261,9 +271,11 @@
     text-align: center;
     transition: background-color 250ms ease-in-out;
   }
-
+  .button-wrap2 > button{
+    height: 83px;
+    width: 400px;
+  }
   #result {
-    max-height: 768px;
     max-width: 1366px;
     height: 100vh;
     overflow: hidden;
@@ -371,13 +383,12 @@
   }
 
   #textic p {
-    max-width: 791px;
-    max-height: 355px;
+    max-width: 720px;
     font-family: "EBGaramond";
     color: white;
     font-style: normal;
     font-weight: bold;
-    font-size: 54px;
+    font-size: 48px;
     grid-column-start: 1;
     grid-column-end: 1;
   }
@@ -452,7 +463,6 @@
   }
 
   #result {
-    max-height: 768px;
     max-width: 1366px;
     height: 100vh;
     overflow: hidden;
@@ -472,4 +482,703 @@
     align-items: center;
   }
 
+}
+@media all and (max-width: 768px) {
+  body {
+    max-width: 768px;
+    height: 100vh;
+  }
+
+  .loading {
+    max-width: 768px;
+    height: 100vh;
+  }
+
+  #OpeningCont {
+    max-width: 768px;
+    height: 100vh;
+  }
+
+  .biggates {
+    display: none;
+  }
+
+  .smallergates {
+    display: none;
+  }
+  .evensmallergates{
+    display: block;
+  }
+
+  .cloud>img {
+    transform: scale(0.50);
+  }
+
+  .cloud1 {
+    margin-top: -420px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .cloud2 {
+    margin-top: -1366px;
+    grid-column-start: 3;
+  }
+
+  .cloud3 {
+    display: none;
+    margin-top: -400px;
+    grid-column-start: 0;
+    grid-column-end: 4;
+  }
+  .cloud6 {
+    margin-top: 280px;
+    grid-column-start: 0;
+    grid-column-end: 2;
+  }
+  .cloud5 {
+    display: none;
+  }
+  .cloud4{
+    margin-top: 160px;
+  }
+
+
+  @keyframes Opening {
+    0% {
+      margin-right: 50px;
+    }
+
+    100% {
+      margin-right: 0;
+    }
+  }
+
+  .stick {
+    background-color: #6B4E39;
+    height: 500px;
+    width: 8px;
+  }
+
+  #OpeningText {
+    max-width: 768px;
+    overflow: hidden;
+    height: 100vh;
+    display: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  #textic p {
+    max-width: 422px;
+    max-height: 355px;
+    font-family: "EBGaramond";
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+
+  .cloudi>img {
+    transform: scale(0.70);
+  }
+
+  .SClouds1>img {
+    margin-top: -50px;
+  }
+
+  .SClouds2>img {
+    margin-top: -35px;
+  }
+
+  .SClouds3>img {
+    margin-top: -50px;
+  }
+
+  .SClouds6>img {
+    transform: scale(0.80);
+  }
+
+  .SClouds1 {
+    margin-top: -470px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  .SClouds2 {
+    margin-top: -570px;
+    grid-column-start: 8;
+    grid-column-end: 9;
+  }
+
+  .SClouds3 {
+    display: none;
+  }
+
+  .SClouds4 {
+    margin-top: 180px;
+  }
+
+  .SClouds5 {
+    margin-top: 305px;
+  }
+
+  .SClouds6 {
+    margin-top: 150px;
+  }
+
+  button {
+    line-height: 145%;
+    width: 400px;
+    height: 83px;
+    background-color: #452F15;
+    grid-column: 2 / 3;
+    grid-row: 8 / 10;
+    color: white;
+    font-size: 64px;
+    text-align: center;
+    transition: background-color 250ms ease-in-out;
+  }
+  .button-wrap2 > button{
+    width: 400px;
+    height: 83px;
+    grid-row: 8 / 10;
+  }
+  .fire{
+    height: 70px;
+  }
+  #aad{
+    display: block;
+  }
+  #post{
+    display: none;
+  }
+  #sl{
+    display: block;
+  }
+  #sad{
+    display: none;
+  }
+  #result {
+    max-width: 768px;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  #count {
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    font-family: "Le Murmure";
+    font-size: 96px;
+    text-align: center;
+    color: white;
+    justify-items: center;
+    align-items: center;
+  }
+
+}
+
+@media all and (max-width: 414px) {
+  body {
+    max-width: 414px;
+    height: 100vh;
+  }
+
+  .loading {
+    max-width: 414px;
+    height: 100vh;
+  }
+
+  #OpeningCont {
+    justify-content: space-around;
+    max-width: 414px;
+    height: 100vh;
+  }
+
+  .biggates {
+    display: none;
+  }
+
+  .smallergates {
+    display: none;
+  }
+  .evensmallergates{
+    display: block;
+  }
+
+  .cloud>img {
+    transform: scale(0.50);
+  }
+
+  .cloud1 {
+    margin-top: -420px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .cloud2 {
+    margin-top: -1366px;
+    grid-column-start: 3;
+  }
+
+  .cloud3 {
+    display: none;
+    margin-top: -400px;
+    grid-column-start: 0;
+    grid-column-end: 4;
+  }
+  .cloud6 {
+    margin-top: 280px;
+    grid-column-start: 0;
+    grid-column-end: 2;
+  }
+  .cloud5 {
+    display: none;
+  }
+  .cloud4{
+    margin-top: 160px;
+  }
+
+
+  @keyframes Opening {
+    0% {
+      margin-right: 50px;
+    }
+
+    100% {
+      margin-right: 0;
+    }
+  }
+
+  .stick {
+    background-color: #6B4E39;
+    height: 500px;
+    width: 8px;
+  }
+
+  #OpeningText {
+    max-width: 414px;
+    overflow: hidden;
+    height: 100vh;
+    display: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    justify-content: space-around;
+  }
+
+  #textic p {
+    max-width: 318px;
+    max-height: 355px;
+    font-family: "EBGaramond";
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+
+  .cloudi>img {
+    transform: scale(0.50);
+  }
+  .cloud>img {
+    transform: scale(0.50);
+  }
+
+  .SClouds1>img {
+    margin-top: -50px;
+  }
+
+  .SClouds2>img {
+    margin-top: -83px;
+  }
+
+  .SClouds3>img {
+    margin-top: -50px;
+  }
+
+  .SClouds6>img {
+    transform: scale(0.70);
+  }
+
+  .SClouds1 {
+    margin-top: -470px;
+    grid-column-start: 6;
+    grid-column-end: 3;
+  }
+
+  .SClouds2 {
+    margin-top: -570px;
+    grid-column-start: 6;
+    grid-column-end: 9;
+  }
+
+  .SClouds3 {
+    display: none;
+  }
+
+  .SClouds4 {
+    grid-column-start: 7;
+    margin-top: 102px;
+  }
+
+  .SClouds5 {
+    margin-top: 305px;
+  }
+
+  .SClouds6 {
+    grid-column-start: 4;
+    margin-top: -25px;
+  }
+  .game{
+    width: 414px;
+    justify-items: center;;
+    align-items: center;
+  }
+  .IOSClouds1{
+    display: flex;
+    margin-top: -1370px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .IOSClouds2{
+    display: flex;
+    margin-top: -1320px;
+    grid-column-start: 2;
+    grid-column-end: 1;
+  }
+  .IOSClouds1 > img{
+    margin-top: -50px;
+  }
+  .IOSClouds2 > img{
+    margin-top: -50px;
+  }
+
+  button {
+    line-height: 145%;
+    width: 300px;
+    height: 65px;
+    background-color: #452F15;
+    grid-column: 2 / 3;
+    grid-row: 9 / 11;
+    color: white;
+    font-size: 48px;
+    text-align: center;
+    transition: background-color 250ms ease-in-out;
+  }
+  .button-wrap2 > button{
+    width: 300px;
+    height: 65px;
+    grid-row: 9 / 11;
+  }
+  .fire{
+    height: 70px;
+  }
+  #aad{
+    display: block;
+  }
+  #post{
+    display: none;
+  }
+  #sl{
+    display: block;
+  }
+  #sad{
+    display: none;
+  }
+  #result {
+    max-width: 414px;
+    height: 100vh;
+    overflow: hidden;
+    justify-items: center;
+    justify-content: space-around;
+  }
+  .evensmallergates{
+    display: none;
+  }
+ .ios{
+   display: block;
+ }
+  #count {
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    font-family: "Le Murmure";
+    font-size: 96px;
+    text-align: center;
+    color: white;
+    justify-items: center;
+    align-items: center;
+  }
+  .ghost > img{
+    transform: scale(0.50);
+  }
+  #count{
+    width: 414px;
+  }
+  .ghostA > img{
+    transform: scale(0.50);
+  }
+  .ghostB > img{
+    transform: scale(0.50);
+  }
+}
+@media all and (max-width: 360px) {
+  body {
+    max-width: 360px;
+    height: 100vh;
+  }
+
+  .loading {
+    max-width: 360px;
+    height: 100vh;
+  }
+
+  #OpeningCont {
+    justify-content: space-around;
+    max-width: 360px;
+    height: 100vh;
+    align-items: start;
+  }
+
+  .biggates {
+    display: none;
+  }
+
+  .smallergates {
+    display: none;
+  }
+  .evensmallergates{
+    display: block;
+    transform: scale(0.9);
+  }
+
+  .cloud>img {
+    transform: scale(0.50);
+  }
+
+  .cloud1 {
+    margin-top: -420px;
+    grid-column-start: 6;
+    grid-column-end: 4;
+  }
+
+  .cloud2 {
+    display: none;
+    margin-top: -1366px;
+    grid-column-start: 3;
+  }
+
+  .cloud3 {
+    display: none;
+    margin-top: -400px;
+    grid-column-start: 0;
+    grid-column-end: 4;
+  }
+  .cloud6 {
+    margin-top: 15px;
+    grid-column-start: 11;
+    grid-column-end: 0;
+  }
+  .cloud5 {
+    display: none;
+  }
+  .cloud4{
+    margin-top: 160px;
+  }
+
+
+  @keyframes Opening {
+    0% {
+      margin-right: 50px;
+    }
+
+    100% {
+      margin-right: 0;
+    }
+  }
+
+  .stick {
+    background-color: #6B4E39;
+    height: 500px;
+    width: 8px;
+  }
+
+  #OpeningText {
+    max-width: 360px;
+    overflow: hidden;
+    height: 100vh;
+    display: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    justify-content: space-around;
+  }
+
+  #textic p {
+    max-width: 318px;
+    max-height: 355px;
+    font-family: "EBGaramond";
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+
+  .cloudi>img {
+    transform: scale(0.50);
+  }
+  .cloud>img {
+    transform: scale(0.50);
+  }
+
+  .SClouds1>img {
+    margin-top: -50px;
+  }
+
+  .SClouds2>img {
+    margin-top: -83px;
+  }
+
+  .SClouds3>img {
+    margin-top: -50px;
+  }
+
+  .SClouds6>img {
+    transform: scale(0.70);
+  }
+
+  .SClouds1 {
+    margin-top: -470px;
+    grid-column-start: 6;
+    grid-column-end: 3;
+  }
+
+  .SClouds2 {
+    margin-top: -570px;
+    grid-column-start: 6;
+    grid-column-end: 9;
+  }
+
+  .SClouds3 {
+    display: none;
+  }
+
+  .SClouds4 {
+    grid-column-start: 7;
+    margin-top: 102px;
+  }
+
+  .SClouds5 {
+    margin-top: 305px;
+  }
+
+  .SClouds6 {
+    grid-column-start: 4;
+    margin-top: -25px;
+  }
+  .game{
+    width: 414px;
+    justify-items: center;;
+    align-items: center;
+  }
+  .IOSClouds1{
+    display: flex;
+    margin-top: -1370px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .IOSClouds2{
+    display: flex;
+    margin-top: -1320px;
+    grid-column-start: 2;
+    grid-column-end: 1;
+  }
+  .IOSClouds1 > img{
+    margin-top: -50px;
+  }
+  .IOSClouds2 > img{
+    margin-top: -50px;
+  }
+
+  button {
+    line-height: 145%;
+    width: 240px;
+    height: 54px;
+    background-color: #452F15;
+    grid-column: 2 / 3;
+    grid-row: 9 / 11;
+    color: white;
+    font-size: 38px;
+    text-align: center;
+    transition: background-color 250ms ease-in-out;
+  }
+  .button-wrap2 > button{
+    width: 240px;
+    height: 54px;
+    grid-row: 9 / 11;
+  }
+  .fire{
+    height: 70px;
+  }
+  #aad{
+    display: block;
+  }
+  #post{
+    display: none;
+  }
+  #sl{
+    display: block;
+  }
+  #sad{
+    display: none;
+  }
+  #result {
+    max-width: 360px;
+    height: 100vh;
+    overflow: hidden;
+    justify-items: center;
+    justify-content: space-around;
+  }
+  .evensmallergates{
+    display: none;
+  }
+ .ios{
+   display: block;
+ }
+  #count {
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    font-family: "Le Murmure";
+    font-size: 96px;
+    text-align: center;
+    color: white;
+    justify-items: center;
+    align-items: center;
+  }
+  .ghost > img{
+    transform: scale(0.50);
+  }
+  #count{
+    width: 360px;
+  }
+  .ghostA > img{
+    transform: scale(0.50);
+  }
+  .ghostB > img{
+    transform: scale(0.50);
+  }
 }
