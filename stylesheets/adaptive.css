@@ -695,11 +695,16 @@
   }
 
   #OpeningCont {
-    justify-content: space-around;
+    justify-items: center;
+    justify-content: center;
+    align-items: start;
     max-width: 414px;
     height: 100vh;
   }
-
+   .ios{
+     transform: scaleX(0.9);
+    margin-top: 55px;
+  }
   .biggates {
     display: none;
   }
@@ -716,14 +721,14 @@
   }
 
   .cloud1 {
-    margin-top: -420px;
-    grid-column-start: 2;
+    margin-top: -417px;
+    grid-column-start: 5;
     grid-column-end: 4;
   }
 
   .cloud2 {
-    margin-top: -1366px;
-    grid-column-start: 3;
+    margin-top: -428px;
+    grid-column-start: 6;
   }
 
   .cloud3 {
@@ -941,14 +946,6 @@
     max-width: 360px;
     height: 100vh;
   }
-
-  #OpeningCont {
-    justify-content: space-around;
-    max-width: 360px;
-    height: 100vh;
-    align-items: start;
-  }
-
   .biggates {
     display: none;
   }
@@ -1181,4 +1178,13 @@
   .ghostB > img{
     transform: scale(0.50);
   }
+  #OpeningCont {
+    margin-top: 45px;
+    justify-items: center;
+    justify-content: center;
+    max-width: 360px;
+    height: 100vh;
+    align-items: start;
+  }
+
 }
