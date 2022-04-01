@@ -2,13 +2,6 @@
   font-family: "EBGaramond Italic";
   src: url(../fonts/EBGaramond-Italic-VariableFont_wght.ttf);
 }
-img {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-  pointer-events: none;
-
-}
 @font-face {
   font-family: "EBGaramond";
   src: url(../fonts/EBGaramond-VariableFont_wght.ttf);
@@ -23,6 +16,12 @@ body {
   background-color: #241D19;
   max-height: 1080px;
   max-width: 1920px;
+}
+img {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+
 }
 
 .loading {
@@ -359,7 +358,10 @@ body {
   height: 100%;
 }
 #cunt{
-  color: chartreuse;
+  display: grid;
+  grid-template-columns: repeat(20, 5%);
+  grid-template-rows: repeat(10, 10%);
+  color: white;
   font-size: 100px;
   text-align: center;
 }
@@ -411,6 +413,7 @@ body {
 }
 
 .button-wrap {
+  cursor: pointer;
   grid-column: 1 / 1;
   grid-row: 1 / 1;
   display: grid;
@@ -420,6 +423,7 @@ body {
   align-items: center;
 }
 .button-wrap2 {
+  cursor: pointer;
   grid-column: 1 / 1;
   grid-row: 1 / 1;
   opacity: 0;
@@ -436,6 +440,7 @@ body {
 }
 
 button {
+  cursor: pointer;
   height: 105px;
   width: 600px;
   grid-row: 8 / 10;
@@ -453,10 +458,12 @@ button {
 
 button:hover {
   background-color: #140C03;
+  cursor: pointer;
 }
 
 button:active {
   transform: scale(0.99);
+  cursor: pointer;
 }
 
 .hellFire {
