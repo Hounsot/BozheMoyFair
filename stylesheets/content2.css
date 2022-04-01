@@ -208,6 +208,15 @@ body {
   z-index: 2;
   margin-bottom: -100px;
 }
+.SClouds1 > img{
+  margin-top: -10px;
+}
+.SClouds2 > img{
+  margin-top: -10px;
+}
+.SClouds3 > img{
+  margin-top: -10px;
+}
 
 .cloud4 {
   grid-row: 2;
